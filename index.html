@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamanna | UI/UX Designer Portfolio</title>
+    <meta name="description"
+        content="Digital Designer & Product strategist based in Dhaka, specializing in UI/UX and visual identities.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="top">
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="#" class="logo">TAMANNA.</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Work</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <span class="hero-subtitle">Digital Product Designer</span>
+            <h1>Crafting digital experiences that <span style="color: var(--accent);">resonate</span>.</h1>
+            <p class="hero-description">
+                I'm <strong>Umme Jannath Tamanna</strong>, a UX/UI Designer currently shaping innovative products at
+                Brac IT Ltd. I bridge the gap between user needs and business goals through thoughtful design.
+            </p>
+            <a href="#projects" class="btn">View My Work</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="images/about.jpg" alt="Umme Jannath Tamanna Portrait">
+                </div>
+                <div class="about-text">
+                    <p style="font-size: 1.2rem; margin-bottom: 2rem;">
+                        My journey in the ever-evolving world of design has been marked by a commitment to excellence
+                        and a love for crafting interfaces that seamlessly blend form and function.
+                    </p>
+                    <p style="color: var(--text-secondary); margin-bottom: 2rem;">
+                        I am currently dedicated to creating user-centric designs at Brac IT Ltd. My approach combines
+                        technical software engineering foundations with a keen eye for aesthetics, ensuring every pixel
+                        serves a purpose.
+                    </p>
+                    <div style="display: flex; gap: 1.5rem;">
+                        <a href="https://linkedin.com/in/tamu92/" target="_blank"
+                            style="color: var(--accent); font-weight: 600;">LinkedIn <i data-lucide="external-link"
+                                style="width:14px; height:14px; vertical-align: middle;"></i></a>
+                        <a href="https://dribbble.com/ummejannath" target="_blank"
+                            style="color: var(--accent); font-weight: 600;">Dribbble <i data-lucide="external-link"
+                                style="width:14px; height:14px; vertical-align: middle;"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section" style="background: rgba(255,255,255,0.02);">
+        <div class="container">
+            <h2 class="section-title">Specialization</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i data-lucide="palette"
+                        style="color: var(--accent); margin-bottom: 1.5rem; width: 32px; height: 32px;"></i>
+                    <h3>UI/UX Design</h3>
+                    <ul class="skill-list">
+                        <li>User Interface Design</li>
+                        <li>User Experience Strategy</li>
+                        <li>Prototyping & Wireframing</li>
+                        <li>Design Systems & Guidelines</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <i data-lucide="search"
+                        style="color: var(--accent); margin-bottom: 1.5rem; width: 32px; height: 32px;"></i>
+                    <h3>Research</h3>
+                    <ul class="skill-list">
+                        <li>User Persona Hypothesis</li>
+                        <li>Data & Task Analysis</li>
+                        <li>Competitive Research</li>
+                        <li>Usability Testing</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <i data-lucide="wrench"
+                        style="color: var(--accent); margin-bottom: 1.5rem; width: 32px; height: 32px;"></i>
+                    <h3>Tools & Tech</h3>
+                    <ul class="skill-list">
+                        <li>Figma & Adobe XD</li>
+                        <li>Photoshop & Illustrator</li>
+                        <li>Web Development (HTML/CSS)</li>
+                        <li>Motion Design</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Featured Work</h2>
+            <div class="projects-grid">
+                <!-- Project: BRAC Microfinance App -->
+                <div class="project-card">
+                    <img src="images/brac-microfinance.png" alt="Agami App" class="project-img">
+                    <div class="project-overlay">
+                        <h3>Agami App</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 1rem;">Mobile banking & micro-loan
+                            management system for BRAC.</p>
+                        <a href="https://play.google.com/store/apps/details?id=com.bracits.progoti&hl=en"
+                            target="_blank" style="font-weight: 600; color: var(--accent);">View Project →</a>
+                    </div>
+                </div>
+                <!-- Project: EDMS App -->
+                <div class="project-card">
+                    <img src="images/edms-app.png" alt="EDMS Application" class="project-img">
+                    <div class="project-overlay">
+                        <h3>EDMS Mobile</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 1rem;">Electronic Document Management
+                            System for enterprise workflows.</p>
+                        <a href="#" style="font-weight: 600; color: var(--accent);">View Project →</a>
+                    </div>
+                </div>
+                <!-- Project: Career Hub -->
+                <div class="project-card">
+                    <img src="images/career-hub.png" alt="Career Hub Dashboard" class="project-img">
+                    <div class="project-overlay">
+                        <h3>SDP Career Hub</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 1rem;">Unified platform for career
+                            development and counseling.</p>
+                        <a href="https://careerhub.brac.net/" target="_blank"
+                            style="font-weight: 600; color: var(--accent);">View Project →</a>
+                    </div>
+                </div>
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <img src="images/work-1.png" alt="Soppiya Dashboard" class="project-img">
+                    <div class="project-overlay">
+                        <h3>Soppiya Dashboard</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 1rem;">SaaS E-commerce CMS platform
+                            interface design.</p>
+                        <a href="https://soppiya.com/" target="_blank"
+                            style="font-weight: 600; color: var(--accent);">View Project →</a>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <img src="images/work-2.png" alt="Shadow Theme" class="project-img">
+                    <div class="project-overlay">
+                        <h3>Shadow Theme</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 1rem;">Sophisticated fashion e-commerce
+                            experience.</p>
+                        <a href="#" style="font-weight: 600; color: var(--accent);">View Project →</a>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <img src="images/work-4.png" alt="Fresco Grocery App" class="project-img">
+                    <div class="project-overlay">
+                        <h3>Fresco App</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 1rem;">Intuitive mobile grocery shopping
+                            experience.</p>
+                        <a href="https://dribbble.com/shots/23078864-Grocery-Shopping-App-Fresco" target="_blank"
+                            style="font-weight: 600; color: var(--accent);">View Project →</a>
+                    </div>
+                </div>
+                <!-- Project 5 -->
+                <div class="project-card">
+                    <img src="images/work-5.png" alt="Smart Wallet" class="project-img">
+                    <div class="project-overlay">
+                        <h3>Smart Wallet</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 1rem;">Financial management application
+                            mockup.</p>
+                        <a href="https://dribbble.com/shots/23108964-Finance-App" target="_blank"
+                            style="font-weight: 600; color: var(--accent);">View Project →</a>
+                    </div>
+                </div>
+                <!-- Project 6 -->
+                <div class="project-card">
+                    <img src="images/work-6.png" alt="Mood Mate AI" class="project-img">
+                    <div class="project-overlay">
+                        <h3>Mood Mate AI</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 1rem;">Emotional wellness AI app concept.
+                        </p>
+                        <a href="#" style="font-weight: 600; color: var(--accent);">View Project →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience/Resume Section -->
+    <section id="experience" class="section" style="background: rgba(255,255,255,0.01);">
+        <div class="container">
+            <h2 class="section-title">My Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-date">June 2025 - Present</span>
+                    <h3>Brac IT Ltd.</h3>
+                    <span class="timeline-role">UX/UI Designer</span>
+                    <p style="color: var(--text-secondary);">Leading user-centric design initiatives, creating intuitive
+                        digital solutions, and collaborating with multidisciplinary teams to drive innovation.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-date">Oct 2021 - June 2025</span>
+                    <h3>Soppiya Innovation LTD</h3>
+                    <span class="timeline-role">UI/UX Designer</span>
+                    <p style="color: var(--text-secondary);">Designed user-friendly interfaces, contributed to
+                        cutting-edge projects, and collaborated with cross-functional teams to redefine industry design
+                        standards. Progressed from Jr. UI/UX Designer to UI/UX Designer during this tenure.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-date">Feb 2020 - Jan 2021</span>
+                    <h3>BugsBd Ltd.</h3>
+                    <span class="timeline-role">Research & Development Executive</span>
+                    <p style="color: var(--text-secondary);">Focusing on blockchain and cybersecurity trends, data
+                        analysis, and crafting detailed user persona reports.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-date">2016 - 2020</span>
+                    <h3>Daffodil International University</h3>
+                    <span class="timeline-role">B.Sc in Software Engineering</span>
+                    <p style="color: var(--text-secondary);">Comprehensive software development program with a
+                        concentration on UI/UX principles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <ul class="footer-nav">
+                    <li><a href="https://linkedin.com/in/tamu92/" target="_blank">Linkedin</a></li>
+                    <li><a href="https://dribbble.com/ummejannath" target="_blank">Dribbble</a></li>
+                    <li><a href="https://behance.net/ummejannath" target="_blank">Behance</a></li>
+                </ul>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="footer-bottom">
+                <div class="footer-col contact-info">
+                    <p>+880 1755850964</p>
+                    <p><a href="mailto:ummejannath5@gmail.com">ummejannath5@gmail.com</a></p>
+                </div>
+
+                <div class="footer-col credits">
+                    <p>Designed & Developed</p>
+                    <p>by Umme Jannath Tamanna</p>
+                </div>
+
+                <div class="footer-col copyright-info">
+                    <p>All rights reserved,</p>
+                    <p>Tamanna &copy; <span id="year"></span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Init Lucide Icons
+        lucide.createIcons();
+
+        // Update Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Particles Animation
+        const canvas = document.getElementById('particle-canvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        const particleCount = 60;
+
+        class Particle {
+            constructor() {
+                this.reset();
+            }
+            reset() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2 + 0.5;
+                this.speedX = (Math.random() - 0.5) * 0.4;
+                this.speedY = (Math.random() - 0.5) * 0.4;
+                this.opacity = Math.random() * 0.5 + 0.1;
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+
+                if (this.x > canvas.width) this.x = 0;
+                if (this.x < 0) this.x = canvas.width;
+                if (this.y > canvas.height) this.y = 0;
+                if (this.y < 0) this.y = canvas.height;
+            }
+            draw() {
+                ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function initParticles() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            particles = [];
+            for (let i = 0; i < particleCount; i++) {
+                particles.push(new Particle());
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            requestAnimationFrame(animate);
+        }
+
+        window.addEventListener('resize', initParticles);
+        initParticles();
+        animate();
+
+        // Smooth reveal on scroll (Simple)
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section').forEach(section => {
+            section.style.opacity = '0.8'; // Subtle fade in state
+            section.style.transition = 'all 0.8s ease-out';
+            observer.observe(section);
+        });
+    </script>
+</body>
+
+</html>
