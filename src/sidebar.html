@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Umme Jannath Tamanna — Product Designer</title>
+  <meta name="description"
+    content="Umme Jannath Tamanna is a Product/UX-UI Designer in Dhaka crafting user-centric fintech, e-commerce and enterprise experiences at Brac IT Ltd.">
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230A0E14'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='16' font-weight='700' fill='%232DD4BF' text-anchor='middle'%3ET%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0A0E14;
+      --bg-alt: #111621;
+      --ink: #EDEFF5;
+      --ink-muted: #9BA3B8;
+      --rule: rgba(255, 255, 255, .08);
+      --rule-strong: rgba(255, 255, 255, .16);
+
+      --accent: #2DD4BF;
+      --accent-dim: rgba(45, 212, 191, .12);
+      --purple: #8B5CF6;
+      --blue: #3B82F6;
+
+      --font-display: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+
+      --space-1: 4px;
+      --space-2: 8px;
+      --space-3: 12px;
+      --space-4: 16px;
+      --space-5: 24px;
+      --space-6: 32px;
+      --space-7: 48px;
+      --space-8: 64px;
+      --space-9: 96px;
+
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-pill: 999px;
+
+      --font: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+
+      --ease-out: cubic-bezier(.16, 1, .3, 1);
+      --sidebar-w: 420px;
+      --gutter: 80px;
+    }
+
+    @media (max-width:1080px) {
+      :root {
+        --gutter: 48px;
+      }
+    }
+
+    @media (max-width:640px) {
+      :root {
+        --gutter: 24px;
+      }
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    ul,
+    ol {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      margin: 0;
+      font-family: var(--font-display);
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      line-height: 1.15;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    button {
+      font: inherit;
+      color: inherit;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--bg);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--rule-strong);
+      border-radius: 6px;
+      border: 2px solid var(--bg);
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .skip-link {
+      position: fixed;
+      top: -100px;
+      left: 20px;
+      z-index: 1000;
+      background: var(--accent);
+      color: var(--bg);
+      border-radius: var(--radius-sm);
+      padding: var(--space-3) var(--space-5);
+      font-weight: 700;
+      transition: top .2s var(--ease-out);
+    }
+
+    .skip-link:focus {
+      top: 20px;
+    }
+
+    .mono {
+      font-family: var(--font-mono);
+    }
+
+    /* ---------- Kinetic background ---------- */
+    .page-bg {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .page-bg .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(90px);
+    }
+
+    .page-bg .blob-a {
+      width: 640px;
+      height: 640px;
+      top: -260px;
+      left: -160px;
+      background: radial-gradient(circle, rgba(45, 212, 191, .14), transparent 70%);
+      animation: driftA 22s ease-in-out infinite;
+    }
+
+    .page-bg .blob-b {
+      width: 520px;
+      height: 520px;
+      top: 40%;
+      right: -200px;
+      background: radial-gradient(circle, rgba(139, 92, 246, .12), transparent 70%);
+      animation: driftB 26s ease-in-out infinite;
+    }
+
+    .page-bg .blob-c {
+      width: 460px;
+      height: 460px;
+      bottom: -200px;
+      left: 20%;
+      background: radial-gradient(circle, rgba(59, 130, 246, .1), transparent 70%);
+      animation: driftC 30s ease-in-out infinite;
+    }
+
+    @keyframes driftA {
+
+      0%,
+      100% {
+        transform: translate(0, 0);
+      }
+
+      50% {
+        transform: translate(40px, 30px);
+      }
+    }
+
+    @keyframes driftB {
+
+      0%,
+      100% {
+        transform: translate(0, 0);
+      }
+
+      50% {
+        transform: translate(-30px, -25px);
+      }
+    }
+
+    @keyframes driftC {
+
+      0%,
+      100% {
+        transform: translate(0, 0);
+      }
+
+      50% {
+        transform: translate(25px, -30px);
+      }
+    }
+
+    .page-bg .dots {
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(255, 255, 255, .05) 1.4px, transparent 1.4px);
+      background-size: 28px 28px;
+    }
+
+    .shell {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ---------- Layout shell ---------- */
+    .shell {
+      display: flex;
+      min-height: 100vh;
+      max-width: 1440px;
+      margin: 0 auto;
+      gap: 160px;
+    }
+
+    /* ---------- Sidebar ---------- */
+    .sidebar {
+      width: var(--sidebar-w);
+      flex-shrink: 0;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      padding: var(--space-9) var(--gutter);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .side-top .kicker {
+      font-family: var(--font-mono);
+      font-size: .85rem;
+      color: var(--accent);
+      margin-bottom: var(--space-3);
+    }
+
+    .side-top h1 {
+      font-size: 2.75rem;
+      color: var(--ink);
+    }
+
+    .side-top .role {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-top: var(--space-2);
+    }
+
+    .side-top .bio {
+      margin-top: var(--space-5);
+      color: var(--ink-muted);
+      font-size: 1.02rem;
+      max-width: 340px;
+      line-height: 1.7;
+    }
+
+    .side-nav {
+      margin-top: var(--space-8);
+    }
+
+    .side-nav li+li {
+      margin-top: var(--space-4);
+    }
+
+    .side-nav a {
+      display: flex;
+      align-items: center;
+      gap: var(--space-4);
+      font-family: var(--font-mono);
+      font-size: .85rem;
+      font-weight: 500;
+      color: var(--ink-muted);
+      text-transform: uppercase;
+      letter-spacing: .03em;
+    }
+
+    .side-nav a .n {
+      width: 26px;
+      height: 1.5px;
+      background: var(--ink-muted);
+      transition: width .25s var(--ease-out), background .25s var(--ease-out);
+    }
+
+    .side-nav a:hover,
+    .side-nav a:focus-visible {
+      color: var(--ink);
+    }
+
+    .side-nav a:hover .n,
+    .side-nav a:focus-visible .n {
+      width: 44px;
+      background: var(--accent);
+    }
+
+    .side-nav a.active {
+      color: var(--ink);
+    }
+
+    .side-nav a.active .n {
+      width: 44px;
+      background: var(--accent);
+    }
+
+    .side-bottom {
+      display: flex;
+      gap: var(--space-5);
+    }
+
+    .side-bottom a {
+      color: var(--ink-muted);
+      transition: color .2s var(--ease-out), transform .2s var(--ease-out);
+      display: flex;
+    }
+
+    .side-bottom a:hover {
+      color: var(--accent);
+      transform: translateY(-3px);
+    }
+
+    .side-bottom svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    @media (max-width:900px) {
+      .sidebar {
+        display: none;
+      }
+    }
+
+    /* ---------- Mobile header ---------- */
+    .mobile-header {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 900;
+      height: 64px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 var(--gutter);
+      background: rgba(10, 14, 20, .85);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .mobile-header .name {
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+
+    .menu-btn {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--ink);
+    }
+
+    .menu-btn svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .mobile-panel {
+      display: none;
+      position: fixed;
+      inset: 64px 0 0 0;
+      z-index: 850;
+      background: var(--bg);
+      padding: var(--space-7) var(--gutter);
+      transform: translateY(-8px);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .2s var(--ease-out), transform .2s var(--ease-out);
+    }
+
+    .mobile-panel.open {
+      opacity: 1;
+      transform: none;
+      pointer-events: auto;
+    }
+
+    .mobile-panel a {
+      display: flex;
+      align-items: center;
+      gap: var(--space-4);
+      font-size: 1.4rem;
+      font-weight: 700;
+      padding: var(--space-4) 0;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .mobile-panel .mono {
+      color: var(--accent);
+      font-size: .9rem;
+    }
+
+    .mobile-social {
+      display: flex;
+      gap: var(--space-5);
+      margin-top: var(--space-7);
+    }
+
+    .mobile-social svg {
+      width: 20px;
+      height: 20px;
+      color: var(--ink-muted);
+    }
+
+    @media (max-width:900px) {
+      .mobile-header {
+        display: flex;
+      }
+
+      .mobile-panel {
+        display: block;
+      }
+    }
+
+    /* ---------- Main content ---------- */
+    main {
+      flex: 1;
+      min-width: 0;
+      padding: var(--space-9) var(--gutter) var(--space-9) 0;
+    }
+
+    @media (max-width:900px) {
+      main {
+        padding: calc(64px + var(--space-8)) var(--gutter) var(--space-8);
+        max-width: none;
+      }
+    }
+
+    section {
+      margin-bottom: var(--space-9);
+      scroll-margin-top: 100px;
+    }
+
+    .sec-head {
+      display: flex;
+      align-items: baseline;
+      gap: var(--space-4);
+      margin-bottom: var(--space-6);
+      position: sticky;
+      top: 0;
+    }
+
+    .sec-head .num {
+      font-family: var(--font-mono);
+      color: var(--accent);
+      font-size: 1rem;
+    }
+
+    .sec-head h2 {
+      font-size: 1.65rem;
+      color: var(--ink);
+      white-space: nowrap;
+    }
+
+    .sec-head::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--rule);
+      margin-left: var(--space-2);
+    }
+
+    .about p {
+      color: var(--ink-muted);
+      font-size: 1.08rem;
+      line-height: 1.8;
+    }
+
+    .about p+p {
+      margin-top: var(--space-4);
+    }
+
+    .about strong {
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .tool-grid {
+      margin-top: var(--space-6);
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-2) var(--space-5);
+      max-width: 440px;
+    }
+
+    .tool-grid li {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      color: var(--ink-muted);
+      font-size: .95rem;
+      font-family: var(--font-mono);
+    }
+
+    .tool-grid li::before {
+      content: "▹";
+      color: var(--accent);
+    }
+
+    /* ---------- Experience ---------- */
+    .exp-list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .exp-row {
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      gap: var(--space-6);
+      padding: var(--space-5);
+      margin: 0 calc(var(--space-5) * -1);
+      border-radius: var(--radius-md);
+      transition: background .3s var(--ease-out), box-shadow .3s var(--ease-out);
+    }
+
+    .exp-row:hover,
+    .exp-row:focus-within {
+      background: var(--bg-alt);
+      box-shadow: 0 0 0 1px var(--rule);
+    }
+
+    .exp-date {
+      font-family: var(--font-mono);
+      font-size: .82rem;
+      color: var(--ink-muted);
+      padding-top: 3px;
+    }
+
+    .exp-role {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .exp-role .co {
+      color: var(--accent);
+    }
+
+    .exp-current {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-mono);
+      font-size: .68rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: var(--accent);
+      margin-left: var(--space-3);
+    }
+
+    .exp-current .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: .3;
+      }
+    }
+
+    .exp-desc {
+      margin-top: var(--space-3);
+      color: var(--ink-muted);
+      font-size: 1rem;
+      line-height: 1.7;
+      max-width: 520px;
+    }
+
+    @media (max-width:600px) {
+      .exp-row {
+        grid-template-columns: 1fr;
+        gap: var(--space-2);
+      }
+    }
+
+    /* ---------- Work ---------- */
+    .work-list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .work-list li {
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .work-list li:last-child {
+      border-bottom: none;
+    }
+
+    .work-row {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: var(--space-6);
+      align-items: start;
+      padding: var(--space-6) var(--space-5);
+      margin: 0 calc(var(--space-5) * -1);
+      border-radius: var(--radius-md);
+      transition: background .3s var(--ease-out), box-shadow .3s var(--ease-out);
+    }
+
+    .work-thumb {
+      width: 150px;
+      height: 106px;
+      flex-shrink: 0;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--rule);
+      background: var(--bg-alt);
+    }
+
+    .work-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      transition: transform .4s var(--ease-out);
+    }
+
+    .work-row:hover .work-thumb img {
+      transform: scale(1.06);
+    }
+
+    .work-title {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+    }
+
+    .work-title svg {
+      width: 16px;
+      height: 16px;
+      color: var(--ink-muted);
+      flex-shrink: 0;
+      transition: color .2s var(--ease-out), transform .2s var(--ease-out);
+    }
+
+    .work-row:hover .work-title svg {
+      color: var(--accent);
+      transform: translate(2px, -2px);
+    }
+
+    .work-title.is-disabled svg {
+      opacity: .35;
+    }
+
+    .work-row:hover,
+    .work-row:focus-within {
+      background: var(--bg-alt);
+      box-shadow: 0 0 0 1px var(--rule);
+    }
+
+    .work-tag {
+      font-family: var(--font-mono);
+      font-size: .72rem;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: var(--accent);
+      margin-bottom: var(--space-2);
+    }
+
+    .work-row h3 {
+      font-size: 1.2rem;
+      color: var(--ink);
+    }
+
+    .work-row:hover h3 {
+      color: var(--accent);
+    }
+
+    .work-row p {
+      margin-top: var(--space-2);
+      color: var(--ink-muted);
+      font-size: 1rem;
+      line-height: 1.65;
+      max-width: 480px;
+    }
+
+    .work-stack {
+      display: flex;
+      gap: var(--space-3);
+      flex-wrap: wrap;
+      margin-top: var(--space-4);
+    }
+
+    .work-stack span {
+      display: inline-flex;
+      align-items: center;
+      font-family: var(--font-mono);
+      font-size: .72rem;
+      font-weight: 500;
+      color: var(--accent);
+      background: var(--accent-dim);
+      border: 1px solid rgba(45, 212, 191, .25);
+      border-radius: var(--radius-pill);
+      padding: 5px 13px;
+    }
+
+    @media (max-width:600px) {
+      .work-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ---------- Contact ---------- */
+    .contact {
+      text-align: left;
+    }
+
+    .contact .num-wrap {
+      display: flex;
+      align-items: baseline;
+      gap: var(--space-3);
+    }
+
+    .contact h2 {
+      font-size: 2rem;
+      margin-top: var(--space-3);
+    }
+
+    .contact p {
+      color: var(--ink-muted);
+      max-width: 460px;
+      margin-top: var(--space-4);
+      line-height: 1.7;
+    }
+
+    .contact-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-3);
+      margin-top: var(--space-6);
+      padding: var(--space-4) var(--space-6);
+      border: 1.5px solid var(--accent);
+      border-radius: var(--radius-sm);
+      font-family: var(--font-mono);
+      font-weight: 600;
+      color: var(--accent);
+      transition: background .2s var(--ease-out), transform .2s var(--ease-out);
+    }
+
+    .contact-cta:hover {
+      background: var(--accent-dim);
+      transform: translateY(-2px);
+    }
+
+    .contact-details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-7);
+      margin-top: var(--space-8);
+    }
+
+    .contact-details div .l {
+      font-family: var(--font-mono);
+      font-size: .72rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--ink-muted);
+      margin-bottom: var(--space-2);
+    }
+
+    .contact-details div .v {
+      font-size: .98rem;
+      color: var(--ink);
+    }
+
+    .contact-details div .v:hover {
+      color: var(--accent);
+    }
+
+    footer {
+      padding-top: var(--space-8);
+      border-top: 1px solid var(--rule);
+    }
+
+    footer p {
+      font-family: var(--font-mono);
+      font-size: .78rem;
+      color: var(--ink-muted);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity .5s var(--ease-out), transform .5s var(--ease-out);
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="page-bg" aria-hidden="true">
+    <div class="blob blob-a"></div>
+    <div class="blob blob-b"></div>
+    <div class="blob blob-c"></div>
+    <div class="dots"></div>
+  </div>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <svg style="display:none" aria-hidden="true">
+    <symbol id="i-menu" viewBox="0 0 24 24">
+      <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+    </symbol>
+    <symbol id="i-close" viewBox="0 0 24 24">
+      <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 20 20">
+      <path d="M5 15 L15 5 M7 5h8v8" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"
+        stroke-linejoin="round" />
+    </symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24">
+      <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6" fill="none" />
+      <path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.6" fill="none" />
+    </symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24">
+      <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2C9.5 21 3 14.5 3 6a2 2 0 0 1 2-2z"
+        stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round" />
+    </symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24">
+      <rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.5" fill="none" />
+      <path d="M8 10v6M8 7.5v.01M12 16v-3.5c0-1.4 1-2.5 2.3-2.5S17 11 17 12.5V16" stroke="currentColor"
+        stroke-width="1.5" fill="none" stroke-linecap="round" />
+    </symbol>
+    <symbol id="i-dribbble" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5" fill="none" />
+      <path d="M4 10c4 1 8.5 1 10.5-.5M4.5 15c5-1.5 10 0 12.5 3M9 3.5c3 3.5 4.5 8 4.5 13" stroke="currentColor"
+        stroke-width="1.3" fill="none" stroke-linecap="round" />
+    </symbol>
+    <symbol id="i-behance" viewBox="0 0 24 24">
+      <path
+        d="M3 6h5.5a2.5 2.5 0 0 1 0 5H3zM3 11h6a2.7 2.7 0 0 1 0 7H3zM15 8h6M14.2 15c0-2.5 1.8-4 4-4s3.8 1.6 3.8 4.2v.3h-6.6c.1 1.6 1.2 2.6 2.9 2.6 1.1 0 1.9-.4 2.5-1.1"
+        stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+  </svg>
+
+  <div class="mobile-header">
+    <span class="name">Tamanna</span>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobilePanel" aria-label="Open menu">
+      <svg>
+        <use href="#i-menu" />
+      </svg>
+    </button>
+  </div>
+
+  <div class="mobile-panel" id="mobilePanel">
+    <a href="#about"><span class="mono">01.</span>About</a>
+    <a href="#experience"><span class="mono">02.</span>Experience</a>
+    <a href="#work"><span class="mono">03.</span>Work</a>
+    <a href="#contact"><span class="mono">04.</span>Contact</a>
+    <div class="mobile-social">
+      <a href="mailto:ummejannath5@gmail.com" aria-label="Email"><svg>
+          <use href="#i-mail" />
+        </svg></a>
+      <a href="https://linkedin.com/in/tamu92/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg>
+          <use href="#i-linkedin" />
+        </svg></a>
+      <a href="https://dribbble.com/ummejannath" target="_blank" rel="noopener noreferrer" aria-label="Dribbble"><svg>
+          <use href="#i-dribbble" />
+        </svg></a>
+      <a href="https://behance.net/ummejannath" target="_blank" rel="noopener noreferrer" aria-label="Behance"><svg>
+          <use href="#i-behance" />
+        </svg></a>
+    </div>
+  </div>
+
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="side-top">
+        <h1>Tamanna</h1>
+        <p class="role">UI/UX Product Designer</p>
+        <p class="bio">I design user-centric digital products — fintech, enterprise and wellness experiences — for
+          <strong style="color:var(--ink)">Brac IT Ltd</strong> in Dhaka, Bangladesh.
+        </p>
+      </div>
+
+      <nav aria-label="Primary">
+        <ul class="side-nav">
+          <li><a href="#about"><span class="n"></span>About</a></li>
+          <li><a href="#experience"><span class="n"></span>Experience</a></li>
+          <li><a href="#work"><span class="n"></span>Work</a></li>
+          <li><a href="#contact"><span class="n"></span>Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="side-bottom">
+        <a href="mailto:ummejannath5@gmail.com" aria-label="Email"><svg>
+            <use href="#i-mail" />
+          </svg></a>
+        <a href="tel:+8801755850964" aria-label="Phone"><svg>
+            <use href="#i-phone" />
+          </svg></a>
+        <a href="https://linkedin.com/in/tamu92/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg>
+            <use href="#i-linkedin" />
+          </svg></a>
+        <a href="https://dribbble.com/ummejannath" target="_blank" rel="noopener noreferrer" aria-label="Dribbble"><svg>
+            <use href="#i-dribbble" />
+          </svg></a>
+        <a href="https://behance.net/ummejannath" target="_blank" rel="noopener noreferrer" aria-label="Behance"><svg>
+            <use href="#i-behance" />
+          </svg></a>
+      </div>
+    </aside>
+
+    <main id="main">
+
+      <section id="about">
+        <div class="about reveal">
+          <p>My work is driven by a strong commitment to creating meaningful, user-centered digital experiences where
+            <strong>form and function</strong> work seamlessly together. As a UI/UX Designer at BRAC IT Ltd, I work
+            across UI/UX design, user research, prototyping, and design systems, with a focus on transforming complex
+            requirements and workflows into intuitive, accessible, and visually refined products. My background in
+            Software Engineering gives me a strong understanding of how products are built, allowing me to collaborate
+            effectively with developers and bridge the gap between design and technology.
+          </p>
+          <p>I hold a B.Sc. in Software Engineering from Daffodil International University and bring 5+ years of
+            experience working across digital products and platforms.</p>
+          <p>My day-to-day toolkit includes Figma, Adobe XD, Photoshop, Illustrator, design systems, usability testing,
+            HTML, and CSS, combining design thinking with technical understanding to ensure that every design decision
+            has a clear purpose and contributes to a better user experience.</p>
+          <ul class="tool-grid">
+            <li>Figma &amp; Adobe XD</li>
+            <li>Photoshop &amp; Illustrator</li>
+            <li>Design Systems</li>
+            <li>Usability Testing</li>
+            <li>HTML &amp; CSS</li>
+            <li>Motion Design</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="experience">
+        <ol class="exp-list reveal">
+          <li class="exp-row">
+            <p class="exp-date mono">June 2025 —<br>Present</p>
+            <div>
+              <p class="exp-role">UX/UI Designer <span class="co">· Brac IT Ltd.</span><span class="exp-current"><span
+                    class="dot"></span>Current</span></p>
+              <p class="exp-desc">Leading user-centric design initiatives, creating intuitive digital solutions, and
+                collaborating with multidisciplinary teams to drive innovation.</p>
+            </div>
+          </li>
+          <li class="exp-row">
+            <p class="exp-date mono">Oct 2021 —<br>June 2025</p>
+            <div>
+              <p class="exp-role">UI/UX Designer <span class="co">· Soppiya Innovation LTD</span></p>
+              <p class="exp-desc">Designed user-friendly interfaces and contributed to cutting-edge projects,
+                progressing from Jr. UI/UX Designer to UI/UX Designer while redefining industry design standards with
+                cross-functional teams.</p>
+            </div>
+          </li>
+          <li class="exp-row">
+            <p class="exp-date mono">Feb 2020 —<br>Jan 2021</p>
+            <div>
+              <p class="exp-role">R&amp;D Executive <span class="co">· BugsBd Ltd.</span></p>
+              <p class="exp-desc">Focused on blockchain and cybersecurity trends, data analysis, and crafting detailed
+                user persona reports.</p>
+            </div>
+          </li>
+          <li class="exp-row">
+            <p class="exp-date mono">2016 —<br>2020</p>
+            <div>
+              <p class="exp-role">B.Sc Software Engineering <span class="co">· Daffodil International University</span>
+              </p>
+              <p class="exp-desc">Comprehensive software development program with a concentration on UI/UX principles.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section id="work">
+        <ol class="work-list reveal">
+          <li>
+            <div class="work-row">
+              <div class="work-thumb"><img src="assets/brac-microfinance.png" alt="Agami banking app screens showing a loan dashboard and transaction history" loading="lazy" decoding="async"></div>
+              <div>
+                <p class="work-tag">Fintech · Mobile App</p>
+                <a class="work-title" href="https://play.google.com/store/apps/details?id=com.bracits.progoti&hl=en"
+                  target="_blank" rel="noopener noreferrer"><h3>Agami App</h3><svg>
+                    <use href="#i-arrow" />
+                  </svg></a>
+                <p>Mobile banking &amp; micro-loan management system built for BRAC's microfinance members.</p>
+                <div class="work-stack"><span>Fintech</span><span>Android</span><span>Bangla UI</span></div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="work-row">
+              <div class="work-thumb"><img src="assets/edms-app.png" alt="EDMS enterprise app screens showing module list and batch details form" loading="lazy" decoding="async"></div>
+              <div>
+                <p class="work-tag">Enterprise · Mobile App</p>
+                <span class="work-title is-disabled" aria-label="Internal enterprise tool, no public link"><h3>EDMS Mobile</h3><svg>
+                    <use href="#i-arrow" />
+                  </svg></span>
+                <p>Electronic Document Management System designed for internal enterprise workflows.</p>
+                <div class="work-stack"><span>Enterprise</span><span>Workflow</span></div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="work-row">
+              <div class="work-thumb"><img src="assets/career-hub.png" alt="SDP Career Hub dashboard showing onboarding and counseling session progress" loading="lazy" decoding="async"></div>
+              <div>
+                <p class="work-tag">EdTech · Web Platform</p>
+                <a class="work-title" href="https://careerhub.brac.net/" target="_blank" rel="noopener noreferrer"><h3>SDP Career Hub</h3><svg>
+                    <use href="#i-arrow" />
+                  </svg></a>
+                <p>A unified platform for career development, counseling sessions and CV review.</p>
+                <div class="work-stack"><span>EdTech</span><span>Web</span></div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="work-row">
+              <div class="work-thumb"><img src="assets/work-1.png" alt="Soppiya SaaS dashboard showing a product management table" loading="lazy" decoding="async"></div>
+              <div>
+                <p class="work-tag">SaaS · Dashboard</p>
+                <a class="work-title" href="https://soppiya.com/" target="_blank" rel="noopener noreferrer"><h3>Soppiya Dashboard</h3><svg>
+                    <use href="#i-arrow" />
+                  </svg></a>
+                <p>SaaS e-commerce CMS platform interface for merchants to manage their stores.</p>
+                <div class="work-stack"><span>SaaS</span><span>Dashboard</span></div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="work-row">
+              <div class="work-thumb"><img src="assets/work-2.png" alt="Shadow fashion e-commerce theme homepage with a summer collection banner" loading="lazy" decoding="async"></div>
+              <div>
+                <p class="work-tag">E-commerce · Web Theme</p>
+                <span class="work-title is-disabled" aria-label="Theme concept, no public link"><h3>Shadow Theme</h3><svg>
+                    <use href="#i-arrow" />
+                  </svg></span>
+                <p>A sophisticated fashion e-commerce storefront theme and shopping experience.</p>
+                <div class="work-stack"><span>E-commerce</span><span>Theme</span></div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="work-row">
+              <div class="work-thumb"><img src="assets/work-4.png" alt="Fresco grocery app screens showing product details and category browsing" loading="lazy" decoding="async"></div>
+              <div>
+                <p class="work-tag">E-commerce · Mobile App</p>
+                <a class="work-title" href="https://dribbble.com/shots/23078864-Grocery-Shopping-App-Fresco"
+                  target="_blank" rel="noopener noreferrer"><h3>Fresco App</h3><svg>
+                    <use href="#i-arrow" />
+                  </svg></a>
+                <p>An intuitive mobile grocery shopping experience from browse to checkout.</p>
+                <div class="work-stack"><span>E-commerce</span><span>Mobile</span></div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="work-row">
+              <div class="work-thumb"><img src="assets/work-5.png" alt="Smart Wallet finance app screens showing balance and an expense chart" loading="lazy" decoding="async"></div>
+              <div>
+                <p class="work-tag">Fintech · Concept</p>
+                <a class="work-title" href="https://dribbble.com/shots/23108964-Finance-App" target="_blank"
+                  rel="noopener noreferrer"><h3>Smart Wallet</h3><svg>
+                    <use href="#i-arrow" />
+                  </svg></a>
+                <p>A financial management application concept for tracking spend and topping up.</p>
+                <div class="work-stack"><span>Fintech</span><span>Concept</span></div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="work-row">
+              <div class="work-thumb"><img src="assets/work-6.png" alt="Mood Mate AI wellness app screens showing mood check-in and an AI chat companion" loading="lazy" decoding="async"></div>
+              <div>
+                <p class="work-tag">Wellness · AI Concept</p>
+                <span class="work-title is-disabled" aria-label="Concept exploration, no public link"><h3>Mood Mate AI</h3><svg>
+                    <use href="#i-arrow" />
+                  </svg></span>
+                <p>An emotional wellness AI companion app concept for daily mood check-ins.</p>
+                <div class="work-stack"><span>Wellness</span><span>AI</span></div>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section id="contact" class="contact">
+        <div class="reveal">
+          <p class="num-wrap"><span class="num mono">04.</span></p>
+          <h2>Let's build something worth using</h2>
+          <p>Have a product that needs thoughtful design? I'm always open to new conversations — my inbox is open.</p>
+          <a class="contact-cta" href="mailto:ummejannath5@gmail.com">Say hello <svg width="16" height="16"
+              viewBox="0 0 20 20">
+              <use href="#i-arrow" />
+            </svg></a>
+
+          <div class="contact-details">
+            <div>
+              <p class="l mono">Email</p>
+              <a class="v" href="mailto:ummejannath5@gmail.com">ummejannath5@gmail.com</a>
+            </div>
+            <div>
+              <p class="l mono">Phone</p>
+              <a class="v" href="tel:+8801755850964">+880 1755-850964</a>
+            </div>
+            <div>
+              <p class="l mono">WhatsApp</p>
+              <a class="v" href="https://wa.me/8801755850964" target="_blank" rel="noopener noreferrer">Message
+                directly</a>
+            </div>
+          </div>
+        </div>
+
+        <footer>
+          <p>Designed &amp; built by Umme Jannath Tamanna · © 2026</p>
+        </footer>
+      </section>
+
+    </main>
+  </div>
+
+  <script>
+    (function () {
+      "use strict";
+
+      var menuBtn = document.getElementById('menuBtn');
+      var panel = document.getElementById('mobilePanel');
+      function closeMenu() {
+        panel.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuBtn.innerHTML = '<svg><use href="#i-menu"/></svg>';
+      }
+      function openMenu() {
+        panel.classList.add('open');
+        menuBtn.setAttribute('aria-expanded', 'true');
+        menuBtn.innerHTML = '<svg><use href="#i-close"/></svg>';
+      }
+      menuBtn.addEventListener('click', function () {
+        panel.classList.contains('open') ? closeMenu() : openMenu();
+      });
+      panel.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', closeMenu); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeMenu(); });
+
+      var navLinks = document.querySelectorAll('.side-nav a, .mobile-panel a');
+      var sections = ['about', 'experience', 'work', 'contact']
+        .map(function (id) { return document.getElementById(id); })
+        .filter(Boolean);
+
+      function setActive(id) {
+        navLinks.forEach(function (a) {
+          var match = a.getAttribute('href') === '#' + id;
+          a.classList.toggle('active', match);
+          if (match) { a.setAttribute('aria-current', 'true'); } else { a.removeAttribute('aria-current'); }
+        });
+      }
+
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) { if (entry.isIntersecting) { setActive(entry.target.id); } });
+        }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+        sections.forEach(function (s) { observer.observe(s); });
+
+        var revealObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) { entry.target.classList.add('is-visible'); revealObserver.unobserve(entry.target); }
+          });
+        }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.reveal').forEach(function (el) { revealObserver.observe(el); });
+      } else {
+        document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('is-visible'); });
+      }
+    })();
+  </script>
+
+</body>
+
+</html>
