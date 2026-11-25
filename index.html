@@ -83,13 +83,9 @@
   /* ---------- Shapes ---------- */
   .shape{ display:inline-flex; flex-shrink:0; }
   .shape svg{ display:block; }
-  .fill-blue{ color:var(--blue); }
-  .fill-yellow{ color:var(--yellow); }
-  .fill-red{ color:var(--red); }
 
   /* ---------- Section header ---------- */
   .eyebrow{ display:flex; align-items:center; gap:var(--space-3); margin-bottom:var(--space-4); }
-  .eyebrow .shape{ width:14px; height:14px; }
   .eyebrow span{ font-size:.8rem; font-weight:700; text-transform:uppercase; letter-spacing:.12em; color:var(--ink-muted); }
 
   .section-title{ font-size:clamp(1.9rem,3.8vw,2.7rem); max-width:680px; margin-bottom:var(--space-5); }
@@ -283,9 +279,8 @@
   .skill-badge.yellow{ background:var(--yellow-tint); color:#946200; }
   .skill-badge.red{ background:var(--red-tint); color:var(--red); }
   .skill-card h3{ font-size:1.3rem; margin-bottom:var(--space-5); }
-  .skill-card li{ display:flex; align-items:center; gap:var(--space-3); padding:var(--space-3) 0; color:var(--ink-muted); font-size:.95rem; border-top:1px solid var(--rule); }
+  .skill-card li{ padding:var(--space-3) 0; color:var(--ink-muted); font-size:.95rem; border-top:1px solid var(--rule); }
   .skill-card li:first-child{ border-top:none; }
-  .skill-card li .shape{ width:7px; height:7px; }
 
   .tag-cloud-label{ grid-column:1/-1; text-align:center; color:var(--ink-muted); font-size:.95rem; margin-top:var(--space-9); }
   .tag-cloud{
@@ -323,12 +318,6 @@
   .work-thumb{ aspect-ratio:4/3; overflow:hidden; background:var(--surface-2); position:relative; }
   .work-thumb img{ width:100%; height:100%; object-fit:cover; object-position:top center; transition:transform .4s var(--ease-out); }
   .work-card:hover .work-thumb img{ transform:scale(1.04); }
-  .work-badge{
-    position:absolute; top:var(--space-4); left:var(--space-4); width:36px; height:36px;
-    border-radius:50%; display:flex; align-items:center; justify-content:center; background:var(--bg);
-  }
-  .work-badge svg{ width:16px; height:16px; }
-
   .work-body{ padding:var(--space-6); display:flex; flex-direction:column; gap:var(--space-3); flex:1; }
   .work-tags{ display:flex; gap:var(--space-2); flex-wrap:wrap; }
   .tag{ font-size:.72rem; font-weight:700; letter-spacing:.03em; text-transform:uppercase; padding:4px var(--space-3); border-radius:var(--radius-pill); background:var(--bg); color:var(--ink-muted); }
@@ -405,9 +394,6 @@
 <a class="skip-link" href="#main">Skip to content</a>
 
 <svg style="display:none" aria-hidden="true">
-  <symbol id="sh-circle" viewBox="0 0 20 20"><circle cx="10" cy="10" r="9" fill="currentColor"/></symbol>
-  <symbol id="sh-square" viewBox="0 0 20 20"><rect x="2" y="2" width="16" height="16" rx="3" fill="currentColor"/></symbol>
-  <symbol id="sh-triangle" viewBox="0 0 20 20"><path d="M10 2 L18 17 L2 17 Z" fill="currentColor"/></symbol>
   <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
   <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
   <symbol id="i-arrow" viewBox="0 0 20 20"><path d="M5 15 L15 5 M7 5h8v8" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
@@ -431,7 +417,6 @@
 <header>
   <div class="wrap nav-inner">
     <a href="#top" class="logo">
-      <svg class="shape" width="24" height="24" viewBox="0 0 20 20"><circle cx="10" cy="10" r="9" fill="#2A4CDB"/></svg>
       Tamanna
     </a>
     <nav class="nav-links" aria-label="Primary">
@@ -449,11 +434,11 @@
 </header>
 
 <div class="mobile-panel" id="mobilePanel">
-  <a href="#about"><svg class="shape" width="16" height="16" viewBox="0 0 20 20"><use href="#sh-circle" class="fill-blue"/></svg>About</a>
-  <a href="#work"><svg class="shape" width="16" height="16" viewBox="0 0 20 20"><use href="#sh-square" class="fill-yellow"/></svg>Work</a>
-  <a href="#skills"><svg class="shape" width="16" height="16" viewBox="0 0 20 20"><use href="#sh-triangle" class="fill-red"/></svg>Skills</a>
-  <a href="#experience"><svg class="shape" width="16" height="16" viewBox="0 0 20 20"><use href="#sh-circle" class="fill-blue"/></svg>Experience</a>
-  <a href="#contact"><svg class="shape" width="16" height="16" viewBox="0 0 20 20"><use href="#sh-square" class="fill-yellow"/></svg>Contact</a>
+  <a href="#about">About</a>
+  <a href="#work">Work</a>
+  <a href="#skills">Skills</a>
+  <a href="#experience">Experience</a>
+  <a href="#contact">Contact</a>
 </div>
 
 <main id="main">
@@ -486,7 +471,7 @@
     <div class="wrap">
       <div class="grid about-grid">
         <div class="about-text">
-          <div class="eyebrow"><svg class="shape fill-blue" width="14" height="14" viewBox="0 0 20 20"><use href="#sh-circle"/></svg><span>About</span></div>
+          <div class="eyebrow"><span>About</span></div>
           <h2 class="section-title reveal">My journey in the ever-evolving world of design.</h2>
           <p class="about-body reveal">My work has been marked by a commitment to excellence and a love for crafting interfaces that seamlessly blend <strong>form and function</strong>. I'm currently dedicated to creating user-centric designs at Brac IT Ltd, combining a technical software-engineering foundation with a keen eye for aesthetics — ensuring every pixel serves a purpose.</p>
         </div>
@@ -527,7 +512,7 @@
   <!-- Skills -->
   <section id="skills" class="skills">
     <div class="wrap">
-      <div class="eyebrow"><svg class="shape fill-yellow" width="14" height="14" viewBox="0 0 20 20"><use href="#sh-square"/></svg><span>Specialization</span></div>
+      <div class="eyebrow"><span>Specialization</span></div>
       <h2 class="section-title reveal">The craft, the research, the tools behind it.</h2>
       <div class="grid">
         <div class="skills-grid">
@@ -535,30 +520,30 @@
             <div class="skill-badge blue"><svg><use href="#i-layout"/></svg></div>
             <h3>UI/UX Design</h3>
             <ul>
-              <li><svg class="shape fill-blue" width="7" height="7" viewBox="0 0 20 20"><use href="#sh-circle"/></svg>User Interface Design</li>
-              <li><svg class="shape fill-blue" width="7" height="7" viewBox="0 0 20 20"><use href="#sh-circle"/></svg>User Experience Strategy</li>
-              <li><svg class="shape fill-blue" width="7" height="7" viewBox="0 0 20 20"><use href="#sh-circle"/></svg>Prototyping &amp; Wireframing</li>
-              <li><svg class="shape fill-blue" width="7" height="7" viewBox="0 0 20 20"><use href="#sh-circle"/></svg>Design Systems &amp; Guidelines</li>
+              <li>User Interface Design</li>
+              <li>User Experience Strategy</li>
+              <li>Prototyping &amp; Wireframing</li>
+              <li>Design Systems &amp; Guidelines</li>
             </ul>
           </div>
           <div class="skill-card reveal">
             <div class="skill-badge yellow"><svg><use href="#i-search"/></svg></div>
             <h3>Research</h3>
             <ul>
-              <li><svg class="shape fill-yellow" width="7" height="7" viewBox="0 0 20 20"><use href="#sh-square"/></svg>User Persona Hypothesis</li>
-              <li><svg class="shape fill-yellow" width="7" height="7" viewBox="0 0 20 20"><use href="#sh-square"/></svg>Data &amp; Task Analysis</li>
-              <li><svg class="shape fill-yellow" width="7" height="7" viewBox="0 0 20 20"><use href="#sh-square"/></svg>Competitive Research</li>
-              <li><svg class="shape fill-yellow" width="7" height="7" viewBox="0 0 20 20"><use href="#sh-square"/></svg>Usability Testing</li>
+              <li>User Persona Hypothesis</li>
+              <li>Data &amp; Task Analysis</li>
+              <li>Competitive Research</li>
+              <li>Usability Testing</li>
             </ul>
           </div>
           <div class="skill-card reveal">
             <div class="skill-badge red"><svg><use href="#i-tool"/></svg></div>
             <h3>Tools &amp; Tech</h3>
             <ul>
-              <li><svg class="shape fill-red" width="7" height="7" viewBox="0 0 20 20"><use href="#sh-triangle"/></svg>Figma &amp; Adobe XD</li>
-              <li><svg class="shape fill-red" width="7" height="7" viewBox="0 0 20 20"><use href="#sh-triangle"/></svg>Photoshop &amp; Illustrator</li>
-              <li><svg class="shape fill-red" width="7" height="7" viewBox="0 0 20 20"><use href="#sh-triangle"/></svg>Claude Code</li>
-              <li><svg class="shape fill-red" width="7" height="7" viewBox="0 0 20 20"><use href="#sh-triangle"/></svg>Antigravity</li>
+              <li>Figma &amp; Adobe XD</li>
+              <li>Photoshop &amp; Illustrator</li>
+              <li>Claude Code</li>
+              <li>Antigravity</li>
             </ul>
           </div>
         </div>
@@ -568,7 +553,7 @@
           <li class="tag-pill blue" style="--r:-4deg;"><svg><use href="#i-layout"/></svg>Pixel Perfecting</li>
           <li class="tag-pill yellow" style="--r:9deg;"><svg><use href="#i-sparkle"/></svg>Making It Pop</li>
           <li class="tag-pill red" style="--r:-3deg;"><svg><use href="#i-search"/></svg>Reframing Problems</li>
-          <li class="tag-pill blue" style="--r:5deg;"><svg><use href="#sh-circle"/></svg>Thinking Systems</li>
+          <li class="tag-pill blue" style="--r:5deg;">Thinking Systems</li>
           <li class="tag-pill yellow" style="--r:-6deg;"><svg><use href="#i-tool"/></svg>Prototyping</li>
           <li class="tag-pill red" style="--r:4deg;"><svg><use href="#i-check"/></svg>Usability Testing</li>
           <li class="tag-pill blue" style="--r:-8deg;"><svg><use href="#i-play"/></svg>Motion Design</li>
@@ -582,7 +567,7 @@
   <!-- Work -->
   <section id="work" class="work">
     <div class="wrap">
-      <div class="eyebrow"><svg class="shape fill-red" width="14" height="14" viewBox="0 0 20 20"><use href="#sh-triangle"/></svg><span>Featured Work</span></div>
+      <div class="eyebrow"><span>Featured Work</span></div>
       <h2 class="section-title reveal">Eight products, one working method.</h2>
       <p class="section-lede reveal">A selection of fintech, enterprise, e-commerce and wellness products I've designed end-to-end.</p>
 
@@ -591,7 +576,6 @@
 
           <article class="work-card reveal">
             <div class="work-thumb">
-              <span class="work-badge"><svg class="shape fill-blue" width="16" height="16" viewBox="0 0 20 20"><use href="#sh-circle"/></svg></span>
               <img src="assets/brac-microfinance.png" alt="Agami banking app screens showing a loan dashboard, savings options, and transaction history in Bangla" loading="lazy" decoding="async">
             </div>
             <div class="work-body">
@@ -604,7 +588,6 @@
 
           <article class="work-card reveal">
             <div class="work-thumb">
-              <span class="work-badge"><svg class="shape fill-yellow" width="16" height="16" viewBox="0 0 20 20"><use href="#sh-square"/></svg></span>
               <img src="assets/edms-app.png" alt="EDMS enterprise app screens showing module list, master roll list, and batch details form" loading="lazy" decoding="async">
             </div>
             <div class="work-body">
@@ -617,7 +600,6 @@
 
           <article class="work-card reveal">
             <div class="work-thumb">
-              <span class="work-badge"><svg class="shape fill-red" width="16" height="16" viewBox="0 0 20 20"><use href="#sh-triangle"/></svg></span>
               <img src="assets/career-hub.png" alt="SDP Career Hub dashboard showing onboarding, counseling session, and profile completion progress" loading="lazy" decoding="async">
             </div>
             <div class="work-body">
@@ -630,7 +612,6 @@
 
           <article class="work-card reveal">
             <div class="work-thumb">
-              <span class="work-badge"><svg class="shape fill-blue" width="16" height="16" viewBox="0 0 20 20"><use href="#sh-circle"/></svg></span>
               <img src="assets/work-1.png" alt="Soppiya SaaS dashboard showing a product management table with status, inventory and sales channels" loading="lazy" decoding="async">
             </div>
             <div class="work-body">
@@ -643,7 +624,6 @@
 
           <article class="work-card reveal">
             <div class="work-thumb">
-              <span class="work-badge"><svg class="shape fill-yellow" width="16" height="16" viewBox="0 0 20 20"><use href="#sh-square"/></svg></span>
               <img src="assets/work-2.png" alt="Shadow fashion e-commerce theme homepage with a hero banner for a summer collection" loading="lazy" decoding="async">
             </div>
             <div class="work-body">
@@ -656,7 +636,6 @@
 
           <article class="work-card reveal">
             <div class="work-thumb">
-              <span class="work-badge"><svg class="shape fill-red" width="16" height="16" viewBox="0 0 20 20"><use href="#sh-triangle"/></svg></span>
               <img src="assets/work-4.png" alt="Fresco grocery app screens showing product details, home feed, and category browsing" loading="lazy" decoding="async">
             </div>
             <div class="work-body">
@@ -669,7 +648,6 @@
 
           <article class="work-card reveal">
             <div class="work-thumb">
-              <span class="work-badge"><svg class="shape fill-blue" width="16" height="16" viewBox="0 0 20 20"><use href="#sh-circle"/></svg></span>
               <img src="assets/work-5.png" alt="Smart Wallet finance app screens showing balance, bill payments, and an expense statistics chart" loading="lazy" decoding="async">
             </div>
             <div class="work-body">
@@ -682,7 +660,6 @@
 
           <article class="work-card reveal">
             <div class="work-thumb">
-              <span class="work-badge"><svg class="shape fill-yellow" width="16" height="16" viewBox="0 0 20 20"><use href="#sh-square"/></svg></span>
               <img src="assets/work-6.png" alt="Mood Mate AI wellness app screens showing mood check-in, an AI chat companion, and a self-care hub" loading="lazy" decoding="async">
             </div>
             <div class="work-body">
@@ -701,7 +678,7 @@
   <!-- Experience -->
   <section id="experience" class="experience">
     <div class="wrap">
-      <div class="eyebrow"><svg class="shape fill-blue" width="14" height="14" viewBox="0 0 20 20"><use href="#sh-circle"/></svg><span>My Journey</span></div>
+      <div class="eyebrow"><span>My Journey</span></div>
       <h2 class="section-title reveal">Where the thread has run so far.</h2>
       <div class="grid">
         <ol class="exp-grid">
@@ -753,7 +730,7 @@
   <section id="contact" class="contact">
     <div class="wrap">
       <div class="contact-panel">
-        <div class="eyebrow"><svg class="shape fill-yellow" width="14" height="14" viewBox="0 0 20 20"><use href="#sh-square"/></svg><span>Get in touch</span></div>
+        <div class="eyebrow"><span>Get in touch</span></div>
         <h2 class="section-title reveal">Let's build something worth using.</h2>
         <p class="section-lede reveal">Have a product that needs thoughtful design? I'm always open to new conversations.</p>
 
